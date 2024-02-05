@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Exercicio-React-Native",
-    "slug": "Exercicio-React-Native",
+    "name": "viaCep",
+    "slug": "viaCep",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

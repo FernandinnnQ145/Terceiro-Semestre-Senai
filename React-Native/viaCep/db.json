@@ -1,0 +1,13 @@
+{
+    "cep": [
+        {
+            "id": "1",
+            "logradouro": "Alguma rua",
+            "bairro": "algum ai",
+            "localidade": "Diadema",
+            "estado": "Sao Paulo",
+            "uf" : "SP"
+
+        }
+    ]
+}
