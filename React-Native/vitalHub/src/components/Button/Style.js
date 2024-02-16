@@ -20,3 +20,8 @@ justify-content: center;
 gap: 10px;
 border: 1px solid white;
 `
+
+export const ButtonHomeMarcado = styled(Button)`
+width: 100px;
+height: 35px;
+`

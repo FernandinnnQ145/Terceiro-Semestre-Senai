@@ -4,6 +4,9 @@ import { Ionicons } from '@expo/vector-icons';
 import { ImagemPerfilHome } from "../../components/ImagemPerfil/Style";
 import { Box, BoxMensagemHome, BoxRow, BoxTitleAndImage } from "../../components/BoxCadastrar/Style";
 import { TextSubCriar, Title } from "../../components/Title/Style";
+import { CalendarHome } from "../../components/CalendarHome/CalendarHome";
+import { Button, ButtonHomeMarcado } from "../../components/Button/Style";
+import { ButtonTitle } from "../../components/ButtonTitle/Style";
 
 export const HomeMedico = () => {
     return (
@@ -30,8 +33,19 @@ export const HomeMedico = () => {
 
                 </HeaderHome>
 
-                
-                
+                <CalendarHome />
+
+                <ButtonHomeMarcado>
+                    <ButtonTitle>Agendadas</ButtonTitle>
+                </ButtonHomeMarcado>
+                <Button>
+                    <ButtonTitle>Realizadas</ButtonTitle>
+                </Button>
+                <Button>
+                    <ButtonTitle>Canceladas</ButtonTitle>
+                </Button>
+
+
             </Containerwhite>
         </ContainerScrollView>
     )

@@ -13,7 +13,7 @@ height:144px;
 flex-direction:row;
 align-items: center;
 justify-content: space-between;
-padding: 20px 20px 22px 20x;
+padding: 20px 20px 22px 20px;
 border-radius: 0px 0px 15px 15px;
 
 `
