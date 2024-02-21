@@ -6,6 +6,10 @@ font-size: 20px;
 color: #FFFFFF;
 `
 
+export const TitleGray = styled(Title)`
+color: #33303E;
+`
+
 export const TextSubRecuperar = styled(Title)`
 font-family: MontserratAlternates_500Medium;
 font-size: 14px;
@@ -36,7 +40,12 @@ text-align: center;
 
 export const EmailPerfil = styled(TextSubRedefinir)`
 margin-top: none;
+color: #5F5C6B;
+font-size: 14px;
+font-family: Quicksand_500Medium;
 `
+
+
 
 
 

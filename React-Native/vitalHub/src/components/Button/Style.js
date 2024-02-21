@@ -21,7 +21,22 @@ gap: 10px;
 border: 1px solid white;
 `
 
-export const ButtonHomeMarcado = styled(Button)`
-width: 100px;
-height: 35px;
+export const ButtonsHome = styled.View`
+justify-content: space-between;
+flex-direction: row;
+width: 90%;
+margin-top: 38px;
+margin-bottom: 20px;
+
+`
+
+export const ButtonSecundario = styled.TouchableOpacity`
+border: none;
+background-color: transparent;
+margin-top: 30px;
+`
+
+export const ButtonModal = styled(Button)`
+width: 80%;
+
 `

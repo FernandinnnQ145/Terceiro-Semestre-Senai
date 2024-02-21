@@ -4,7 +4,7 @@ import { Navegacao } from './src/screens/Navegacao/Navegacao';
 import { Login } from './src/screens/Login/Login';
 import {RecuperarSenha} from './src/screens/RecuperarSenha/RecuperarSenha'
 import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium,MontserratAlternates_700Bold } from '@expo-google-fonts/montserrat-alternates';
-import { Quicksand_500Medium, Quicksand_600SemiBold } from '@expo-google-fonts/quicksand';
+import { Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from '@expo-google-fonts/quicksand';
 import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
 import { CriarConta } from './src/screens/CriarConta/CriarConta';
 import { VerificarConta } from './src/screens/VerificarConta/VerificarConta';
@@ -24,7 +24,8 @@ export default function App() {
       MontserratAlternates_500Medium,
       MontserratAlternates_700Bold,
       Quicksand_500Medium,
-      Quicksand_600SemiBold
+      Quicksand_600SemiBold,
+      Quicksand_400Regular
     });
   return (
     

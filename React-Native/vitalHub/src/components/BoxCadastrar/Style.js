@@ -22,3 +22,9 @@ align-items: center;
 flex-direction: row;
 justify-content: center;
 `
+
+export const BoxInfoPaciente = styled.View`
+width: 70%;
+gap: 11px;
+
+`
