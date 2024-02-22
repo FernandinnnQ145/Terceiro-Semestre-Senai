@@ -1,5 +1,4 @@
-import { Input } from "../Input/Index"
-import { InputPreenchido } from "../Input/Style"
+import { Input, InputPreenchido, InputProntuario } from "../Input/Style"
 import { Label } from "../Label"
 import { FieldContent } from "./Style"
 
@@ -12,8 +11,8 @@ export const BoxInputPreenchido = ({
     keyType = 'default',
     editable = false,
     value,
-    placeholderColor,
-    fieldHeight = 53
+    height = 53,
+    paddingBottom
 
 }) => {
     return (
@@ -31,8 +30,50 @@ export const BoxInputPreenchido = ({
                     onChangeText={onChangeText}
                     keyType={keyType}
                     value={value}
-                    placeholderColor={placeholderColor}
-                    fieldHeight={fieldHeight}
+                    height={height}
+                    
+                />
+            </FieldContent>
+
+
+
+        </>
+    )
+}
+
+
+//Input para preencher
+export const BoxInput = ({
+    marginBottom = 20,
+    fieldWidth = 100,
+    textLabel,
+    placeholder,
+    onChangeText = null,
+    keyType = 'default',
+    editable = false,
+    value,
+    height = 53,
+    padding,
+    paddingBottom
+}) => {
+    return (
+        <>
+
+            <FieldContent
+                fieldWidth={fieldWidth}
+                marginBottom={marginBottom}>
+
+
+                <Label textLabel={textLabel} />
+                <InputProntuario
+                    editable={editable}
+                    placeholder={placeholder}
+                    onChangeText={onChangeText}
+                    keyType={keyType}
+                    value={value}
+                    height={height}
+                    padding={padding}
+                    paddingBottom={paddingBottom}
                     
                 />
             </FieldContent>

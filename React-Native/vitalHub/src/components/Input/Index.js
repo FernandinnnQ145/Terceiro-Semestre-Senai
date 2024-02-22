@@ -6,9 +6,9 @@ export const Input = ({
     onChangeText,
     keyType,
     value,
-    placeholderColor,
-    fieldHeight
-    
+    height = 53,
+    padding,
+    paddingBottom
 }) =>{
     return(
         <InputPreenchido
@@ -17,8 +17,36 @@ export const Input = ({
             keyBoardType={keyType}
             onChangeText={onChangeText}
             value={value}
-            placeholderTextInput={placeholderColor}
-            customHeight={fieldHeight}
+            height={height}
+            padding={padding}
+            paddingBottom={paddingBottom}
+            
+        />
+    )
+}
+
+
+export const InputProntuario = ({
+    placeholder,
+    editable,
+    onChangeText,
+    keyType,
+    value,
+    height,
+    padding,
+    paddingBottom
+    
+}) =>{
+    return(
+        <InputProntuario
+            placeholder ={placeholder}
+            editable = {editable}
+            keyBoardType={keyType}
+            onChangeText={onChangeText}
+            value={value}
+            height={height}
+            padding={padding}
+            paddingBottom={paddingBottom}
             
         />
     )

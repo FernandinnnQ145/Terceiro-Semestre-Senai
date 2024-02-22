@@ -4,12 +4,14 @@ import { ImagemPerfil } from "../../components/ImagemPerfil/Style"
 import { InfoPerfil } from "../../components/InfoPerfil/Style"
 import { EmailPerfil, NamePerfil } from "../../components/Title/Style"
 import { Box } from "../../components/BoxCadastrar/Style"
-import { BoxInputPreenchido } from "../../components/InputAndLabel/Index"
+import { BoxInput } from "../../components/InputAndLabel/Index"
+import { Button, ButtonSecundario } from "../../components/Button/Style"
+import { ButtonSecundarioTitleBlue, ButtonTitle } from "../../components/ButtonTitle/Style"
 
 
 export const Prontuario = () => {
     return (
-        <ContainerScrollView>
+        <ContainerScrollView showsVerticalScrollIndicator={false}>
             <Containerwhite>
                 <ImagemPerfil
                     source={require('../../assets/image/Imagem_exemplo_perfil.png')}>
@@ -26,19 +28,46 @@ export const Prontuario = () => {
 
 
                 <Box>
-                    <BoxInputPreenchido
+                    <BoxInput
                         textLabel='Descricao da consulta:'
-                        editable={true}
                         placeholder='Descrição'
-                        placeholderTextColor='#34898F'
-                        
+                        height={120}
+                        paddingBottom={60}
+                        editable={true}
+                    />
+                    <BoxInput
+                        textLabel='Descricao da consulta:'
+                        placeholder='Descrição'
+                        editable={true}
 
                     />
+                    <BoxInput
+                        textLabel='Descricao da consulta:'
+                        placeholder='Descrição'
+                        height={120}
+                        paddingBottom={60}
+                        editable={true}
+                    />
+
+
+
+
+                    <Button>
+                        <ButtonTitle>Salvar</ButtonTitle>
+                    </Button>
                 </Box>
+                <ButtonSecundario>
+                    <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
+                </ButtonSecundario>
+
+
 
 
 
             </Containerwhite>
+            
         </ContainerScrollView>
+
+
     )
 }

@@ -11,6 +11,7 @@ import { VerificarConta } from './src/screens/VerificarConta/VerificarConta';
 import { TelaPerfil } from './src/screens/TelaPerfil/TelaPerfil';
 import { Prontuario } from './src/screens/Prontuario/Prontuario';
 import { HomeMedico } from './src/screens/HomeMedico/HomeMedico';
+import { HomePaciente } from './src/screens/HomePaciente/HomePaciente';
 
 
 const Stack = createNativeStackNavigator();
@@ -93,6 +94,12 @@ export default function App() {
         name='HomeMedico'
         component={HomeMedico}
         options={{title: "HomeMedico"}}
+        
+        />
+        <Stack.Screen
+        name='HomePaciente'
+        component={HomePaciente}
+        options={{title: "HomePaciente"}}
         
         />
       </Stack.Navigator>

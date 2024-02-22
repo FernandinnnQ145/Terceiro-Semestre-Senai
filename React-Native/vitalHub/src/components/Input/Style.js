@@ -31,17 +31,24 @@ export const InputPreenchido = styled(Input)`
 background-color: #F5F3F3;
 color: #33303E;
 margin-top: none;
-
-${props => props.editable && css`
-background-color: white;
-border: 2px solid #49B3BA;
-color: #34898F;
-
-
-
-`}
 `
 
-InputPreenchido.defaultProps = {
-    placeholderTextColor: '#34898F', 
-};
+export const InputProntuario = styled.TextInput.attrs({
+    placeholderTextColor: '#34898F'
+})`
+height: ${(props) => `${props.height}px`};
+
+border: 1px solid #49B3BA;
+    border-radius: 5px;
+    font-family: 'MontserratAlternates_600SemiBold';
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-left: 16px;
+    color: #4E4B59;
+    padding: ${(props) => props.padding ? `${props.padding}px` : '15px'};
+    padding-bottom: ${(props) => props.paddingBottom ? `${props.paddingBottom}px` : '15px'};
+
+`
+
+
+
