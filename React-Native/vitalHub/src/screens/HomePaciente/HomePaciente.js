@@ -6,12 +6,16 @@ import { HeaderHome } from '../../components/HeaderHome/Style'
 import { ImagemPerfilHome } from '../../components/ImagemPerfil/Style'
 import { TextSubCriar, Title } from '../../components/Title/Style'
 import { Ionicons } from '@expo/vector-icons';
-import { ButtonsHome } from '../../components/Button/Style'
+import { ButtonAgendar, ButtonsHome } from '../../components/Button/Style'
 import { BtnListAppointment } from '../../components/BtnListAppointment/BtnListAppointment'
 import { CancelattionModal } from '../../components/CancelattionModal/CancelationModal'
 import { AppointmentModal } from '../../components/AppointmentModal/AppointmentModal'
 import { Card } from '../../components/Card/Card'
 import { ListComponent } from '../../components/List/List'
+import { AgendarModal } from '../../components/AgendarModal/AgendarModal'
+import { FontAwesome6 } from '@expo/vector-icons';
+
+
 
 export const HomePaciente = () => {
     //state para o estado da lista(cards)
@@ -31,6 +35,7 @@ export const HomePaciente = () => {
     //state para exibicao dos modals
     const [showModalCancel, setShowModalCancel] = useState(false)
     const [showModalAppointment, setShowModalAppointment] = useState(false)
+    const [showModalAgendar, setShowModalAgendar] = useState(false)
     return (
         <Containerwhite >
             <HeaderHome>
@@ -39,7 +44,7 @@ export const HomePaciente = () => {
                 <BoxTitleAndImage>
 
                     <ImagemPerfilHome
-                        source={require('../../assets/image/Imagem_Paciente_Home.png')}
+                        source={require('../../assets/image/Outra_Img_Medico.png')}
                     />
 
                     <BoxMensagemHome>
@@ -91,8 +96,15 @@ export const HomePaciente = () => {
                         />
                     )
                 }
-                showsVerticalScrollIndicator={false}
-            />
+                showsVerticalScrollIndicator={false}/>
+
+
+
+            
+
+            <ButtonAgendar onPress={() =>setShowModalAgendar(true)}>
+                <FontAwesome6 name="stethoscope" size={26} color="white" />
+            </ButtonAgendar>
 
             {/* modal cancelar */}
             <CancelattionModal
@@ -108,6 +120,14 @@ export const HomePaciente = () => {
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
             />
+
+            <AgendarModal
+            visible={showModalAgendar}
+            setShowModalAgendar={setShowModalAgendar}
+            />
+
+
+
         </Containerwhite >
     )
 }

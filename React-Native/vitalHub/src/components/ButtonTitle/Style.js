@@ -14,6 +14,7 @@ color: #496BBA;
 export const ButtonSecundarioTitleBlue = styled.Text`
 text-transform: capitalize;
 text-decoration: solid;
+font-family: MontserratAlternates_600SemiBold;
 text-decoration-line: underline;
 color: #344F8F;
 `

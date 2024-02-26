@@ -45,6 +45,11 @@ font-size: 14px;
 font-family: Quicksand_500Medium;
 `
 
+export const TitleGrayMargin = styled(TitleGray)`
+margin-top: 40px;
+margin-bottom: 40px;
+`
+
 
 
 

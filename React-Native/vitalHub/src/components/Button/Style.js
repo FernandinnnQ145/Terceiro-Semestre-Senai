@@ -40,3 +40,15 @@ export const ButtonModal = styled(Button)`
 width: 80%;
 
 `
+
+export const ButtonAgendar = styled.TouchableOpacity`
+width: 60px;
+height: 60px;
+background-color: #49B3BA;
+border-radius: 7px;
+align-items: center;
+justify-content: center;
+position: absolute;
+bottom:  20px;
+right:  20px;
+`

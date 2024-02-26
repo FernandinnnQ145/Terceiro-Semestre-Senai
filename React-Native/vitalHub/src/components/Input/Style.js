@@ -38,13 +38,14 @@ export const InputProntuario = styled.TextInput.attrs({
 })`
 height: ${(props) => `${props.height}px`};
 
+
 border: 1px solid #49B3BA;
     border-radius: 5px;
     font-family: 'MontserratAlternates_600SemiBold';
     font-size: 14px;
     margin-bottom: 15px;
     padding-left: 16px;
-    color: #4E4B59;
+    color: #34898F;
     padding: ${(props) => props.padding ? `${props.padding}px` : '15px'};
     padding-bottom: ${(props) => props.paddingBottom ? `${props.paddingBottom}px` : '15px'};
 

@@ -12,6 +12,7 @@ import { TelaPerfil } from './src/screens/TelaPerfil/TelaPerfil';
 import { Prontuario } from './src/screens/Prontuario/Prontuario';
 import { HomeMedico } from './src/screens/HomeMedico/HomeMedico';
 import { HomePaciente } from './src/screens/HomePaciente/HomePaciente';
+import { SelecionarClinica } from './src/screens/SelecionarClinica/SelecionarClinica';
 
 
 const Stack = createNativeStackNavigator();
@@ -100,6 +101,12 @@ export default function App() {
         name='HomePaciente'
         component={HomePaciente}
         options={{title: "HomePaciente"}}
+        
+        />
+        <Stack.Screen
+        name='SelecionarClinica'
+        component={SelecionarClinica}
+        options={{title: "SelecionarClinica"}}
         
         />
       </Stack.Navigator>
