@@ -1,40 +1,31 @@
-import { useState } from "react"
 import { Box } from "../../components/BoxCadastrar/Style"
-import { Button, ButtonSecundario, ButtonSecundarioPag } from "../../components/Button/Style"
-import { ButtonSecundarioTitleBlue, ButtonTitle, TitleGoogle } from "../../components/ButtonTitle/Style"
-import { CardClinicas } from "../../components/CardClinicas/CardClinicas"
+import { Button, ButtonSecundarioPag } from "../../components/Button/Style"
+import { ButtonSecundarioTitleBlue, ButtonTitle } from "../../components/ButtonTitle/Style"
+import { CardMedico } from "../../components/CardMedico/CardMedico"
 import { Containerwhite } from "../../components/Container/Style"
 import { ListComponent } from "../../components/List/List"
 import { TitleGrayMargin } from "../../components/Title/Style"
 
-export const SelecionarClinica = () => {
-    const Clinicas = [
+export const SelecionarMedico = () => {
+    const Medicos = [
         { id: 1, nome: "Fernando", },
         { id: 2, nome: "Fernando",},
         { id: 3, nome: "Fernando", },
     ]
 
-    
-
-
-    const [selectedCard, setSelectedCard] = useState(null);
 
     return (
         <Containerwhite>
-            <TitleGrayMargin>Selecionar clinica</TitleGrayMargin>
+            <TitleGrayMargin>Selecionar medico</TitleGrayMargin>
 
 
-            {/* FlatList que sera feito mais tarde */}
             <ListComponent
-                data={Clinicas}
+                data={Medicos}
                 keyExtractor={(item) => item.id}
-                renderItem={()=>
-                    <CardClinicas/>
-            
-            }
+                renderItem={({ item }) => <CardMedico medico={item} />}
                 showsVerticalScrollIndicator={false}
             />
-
+            
 
             <Box>
                 <Button>
@@ -45,7 +36,6 @@ export const SelecionarClinica = () => {
             <ButtonSecundarioPag>
                 <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
             </ButtonSecundarioPag>
-
         </Containerwhite>
     )
 }

@@ -36,6 +36,10 @@ background-color: transparent;
 margin-top: 30px;
 `
 
+export const ButtonSecundarioPag = styled(ButtonSecundario)`
+margin-bottom: 15px;
+`
+
 export const ButtonModal = styled(Button)`
 width: 80%;
 

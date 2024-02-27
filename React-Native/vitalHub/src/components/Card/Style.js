@@ -10,6 +10,11 @@ gap: 10px;
 margin-bottom: 12px;
 padding: 10px;
 background-color: #FFFFFF;
+shadow-color:'black';
+    shadow-opacity:0.26;
+    shadow-offset:20px 20px;
+    shadow-radius:10px;
+    elevation:5;
 `
 
 export const NamePacient = styled.Text`
