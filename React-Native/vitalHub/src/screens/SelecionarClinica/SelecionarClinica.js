@@ -15,6 +15,7 @@ export const SelecionarClinica = () => {
     ]
 
     
+    const [selectClinicaId, setSelectClinicaId] = useState(0)
 
 
     const [selectedCard, setSelectedCard] = useState(null);
@@ -28,8 +29,12 @@ export const SelecionarClinica = () => {
             <ListComponent
                 data={Clinicas}
                 keyExtractor={(item) => item.id}
-                renderItem={()=>
-                    <CardClinicas/>
+                renderItem={({item})=>
+                    <CardClinicas
+                    clinica={item}
+                    onPress={() => setSelectClinicaId(item.id)}
+                    clickButton={item.id == selectClinicaId}
+                    />
             
             }
                 showsVerticalScrollIndicator={false}

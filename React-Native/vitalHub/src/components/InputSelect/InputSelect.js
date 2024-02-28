@@ -2,12 +2,12 @@ import { StyleSheet, View } from "react-native";
 import RNPickerSelect from 'react-native-picker-select'
 
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MaterialIcons } from '@expo/vector-icons';
 
 import { AntDesign } from '@expo/vector-icons';
 
 
-export const InputSelect = () => {
+export const SelectDate = () => {
   const pickerStyles = {
     inputIOS: style.pickerInput,
     inputAndroid: style.pickerInput,
@@ -25,7 +25,7 @@ export const InputSelect = () => {
         useNativeAndroidPickerStyle={false}
         style={style}
         Icon={() => {
-          return <AntDesign name="caretdown" size={22} color="#34898F" marginRight={8} marginTop={"73%"} />
+          return <MaterialIcons name="keyboard-arrow-down" size={22} color="#34898F" />
         }}
         placeholder={{
           label: 'Selecione um valor',
@@ -60,7 +60,7 @@ const style = StyleSheet.create({
     fontFamily: 'MontserratAlternates_600SemiBold'
   },
   inputAndroid: {
-    marginBottom: "34%",
+    marginBottom: "42px",
     fontSize: 16,
     padding: 16,
     borderWidth: 2,

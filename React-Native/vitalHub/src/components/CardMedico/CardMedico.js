@@ -2,9 +2,12 @@ import { NomeClinica } from "../CardClinicas/Style"
 import { ImagePaciente } from "../ImagemPerfil/Style"
 import { BoxCardMedico, BoxInfoMedico, InfoMedico } from "./Style"
 
-export const CardMedico = () => {
+export const CardMedico = ({
+    onPress,
+    clickButton
+}) => {
     return (
-        <BoxCardMedico>
+        <BoxCardMedico onPress={onPress} clickButton={clickButton}>
             <ImagePaciente
                 source={require('../../assets/image/Imagem_Escolha_Medico.png')} />
 

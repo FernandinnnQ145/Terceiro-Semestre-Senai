@@ -2,9 +2,12 @@ import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { BoxCardClinicas, BoxCardConteudo, BoxClassificacao, BoxDias, Dias, LocalClinica, NomeClinica, Nota } from './Style';
 
-export const CardClinicas = () => {
+export const CardClinicas = ({
+    onPress,
+    clickButton
+}) => {
     return (
-        <BoxCardClinicas>
+        <BoxCardClinicas onPress={onPress} clickButton={clickButton}>
             <BoxCardConteudo>
                 <NomeClinica>Clínica Natureh</NomeClinica>
                 <BoxClassificacao>

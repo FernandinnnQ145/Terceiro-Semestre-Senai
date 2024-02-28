@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BoxCardClinicas } from "../CardClinicas/Style";
 
 export const BoxCardMedico = styled(BoxCardClinicas)`
@@ -6,6 +6,7 @@ flex-direction: row;
 gap: 10px;
 padding: 9px 0px 9px 8px;
 align-items: center;
+${props => props.clickButton ? css`border: 2px solid #496BBA` : css`border: transparent`}
 `
 
 export const BoxInfoMedico = styled.View`

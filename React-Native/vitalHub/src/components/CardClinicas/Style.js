@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const BoxCardClinicas = styled.TouchableOpacity`
 width: 90%;
@@ -8,10 +8,11 @@ background-color: white;
 margin-bottom: 12px;
 align-self: center;
 shadow-color:'black';
-    shadow-opacity:0.26;
-    shadow-offset:20px 20px;
-    shadow-radius:10px;
-    elevation:5;
+shadow-opacity:0.26;
+shadow-offset:20px 20px;
+shadow-radius:10px;
+elevation:5;
+${props => props.clickButton ? css`border: 2px solid #496BBA` : css`border: transparent`}
 
 `
 
