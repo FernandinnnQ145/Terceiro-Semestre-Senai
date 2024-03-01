@@ -16,3 +16,8 @@ width: 77px;
 height: 80px;
 border-radius: 5px;
 `
+export const ImagemLocalConsulta = styled.Image`
+width: 100%;
+height: 330px;
+margin-bottom: 30px;
+`

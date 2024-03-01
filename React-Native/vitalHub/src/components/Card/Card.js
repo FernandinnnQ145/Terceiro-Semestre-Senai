@@ -3,18 +3,25 @@ import { ImagePaciente } from '../ImagemPerfil/Style'
 import { AntDesign } from '@expo/vector-icons';
 
 import { ButtonCard, ButtonText, CardPacienteAgendadas, DataProfilleCard, HoraConsulta, IdadePaciente, NamePacient, TextBold, TextBoldClock, ViewRow } from './Style'
+import { Button, TouchableOpacity } from 'react-native';
 
 export const Card = ({
     situacao = 'pendente',
     onPressCancel,
-    onPressAppointment
+    onPressAppointment,
+    onPressMedico
 }) => {
     return (
         <CardPacienteAgendadas>
 
-            <ImagePaciente
-                source={require('../../assets/image/Image_Paciente1.png')}
-            />
+
+            <TouchableOpacity onPress={onPressMedico}>
+                <ImagePaciente
+                    source={require('../../assets/image/Image_Paciente1.png')}
+                    onPress={onPressMedico}
+                />
+            </TouchableOpacity>
+
 
             <BoxInfoPaciente>
                 <DataProfilleCard>

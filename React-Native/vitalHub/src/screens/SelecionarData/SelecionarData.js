@@ -1,4 +1,5 @@
 
+import { useState } from "react"
 import { LabelModal } from "../../components/AgendarModal/Style"
 import { Box } from "../../components/BoxCadastrar/Style"
 import { Button, ButtonSecundarioPag } from "../../components/Button/Style"
@@ -7,8 +8,10 @@ import CalendarComponent from "../../components/CallendarList/CallendarList"
 import { Containerwhite } from "../../components/Container/Style"
 import { InputSelect, SelectDate } from "../../components/InputSelect/InputSelect"
 import { TitleGrayMargin } from "../../components/Title/Style"
+import { ConfirmarModal } from "../../components/ConfirmarModal/ConfirmarModal"
 
 export const SelecionarData = () => {
+    const [showModalConfirmar, setShowModalConfirmar] = useState(false)
     return (
         <Containerwhite>
             <TitleGrayMargin>Selecionar data</TitleGrayMargin>
@@ -22,7 +25,9 @@ export const SelecionarData = () => {
             <SelectDate/>
 
           <Box>
-                <Button>
+                <Button
+                onPress={()=> setShowModalConfirmar(true)}
+                >
                     <ButtonTitle>Continuar</ButtonTitle>
                 </Button>
             </Box>
@@ -30,6 +35,11 @@ export const SelecionarData = () => {
             <ButtonSecundarioPag>
                 <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
             </ButtonSecundarioPag>
+
+            <ConfirmarModal
+            visible={showModalConfirmar}
+            setModalConfirmar={setShowModalConfirmar}
+            />
         </Containerwhite>
     )
 }

@@ -14,6 +14,7 @@ import { Card } from '../../components/Card/Card'
 import { ListComponent } from '../../components/List/List'
 import { AgendarModal } from '../../components/AgendarModal/AgendarModal'
 import { FontAwesome6 } from '@expo/vector-icons';
+import { MedicoModal } from '../../components/MedicoModal/MedicoModal'
 
 
 
@@ -36,6 +37,8 @@ export const HomePaciente = () => {
     const [showModalCancel, setShowModalCancel] = useState(false)
     const [showModalAppointment, setShowModalAppointment] = useState(false)
     const [showModalAgendar, setShowModalAgendar] = useState(false)
+    const [showModalMedico, setShowModalMedico] = useState(false)
+    
     return (
         <Containerwhite >
             <HeaderHome>
@@ -93,6 +96,7 @@ export const HomePaciente = () => {
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
                             onPressAppointment={() => setShowModalAppointment(true)}
+                            onPressMedico={() => setShowModalMedico(true)}
                         />
                     )
                 }
@@ -124,6 +128,12 @@ export const HomePaciente = () => {
             <AgendarModal
             visible={showModalAgendar}
             setShowModalAgendar={setShowModalAgendar}
+            />
+
+
+            <MedicoModal
+            visible={showModalMedico}
+            setShowModalMedico={setShowModalMedico}
             />
 
 

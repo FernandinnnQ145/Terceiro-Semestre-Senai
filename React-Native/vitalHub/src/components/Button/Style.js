@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ButtonTitle } from "../ButtonTitle/Style";
 
 export const Button = styled.TouchableOpacity`
 margin-top: 25px;
@@ -34,14 +35,15 @@ export const ButtonSecundario = styled.TouchableOpacity`
 border: none;
 background-color: transparent;
 margin-top: 30px;
+margin-bottom: 5px;
 `
 
 export const ButtonSecundarioPag = styled(ButtonSecundario)`
-margin-bottom: 15px;
+margin-bottom: 25px;
 `
 
 export const ButtonModal = styled(Button)`
-width: 80%;
+width: 100%;
 
 `
 
@@ -55,4 +57,9 @@ justify-content: center;
 position: absolute;
 bottom:  20px;
 right:  20px;
+`
+
+export const Btn = styled(Button)`
+`
+export const BtnText = styled(ButtonTitle)`
 `
