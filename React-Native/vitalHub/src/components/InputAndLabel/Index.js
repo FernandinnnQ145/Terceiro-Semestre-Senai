@@ -12,7 +12,9 @@ export const BoxInputPreenchido = ({
     editable = false,
     value,
     height = 53,
-    paddingBottom
+    paddingBottom,
+    multiline,
+    numberOfLines
 
 }) => {
     return (
@@ -25,13 +27,16 @@ export const BoxInputPreenchido = ({
 
                 <Label textLabel={textLabel} />
                 <InputPreenchido
+                    multiline={multiline}
                     editable={editable}
                     placeholder={placeholder}
                     onChangeText={onChangeText}
                     keyType={keyType}
                     value={value}
                     height={height}
-                    
+                    paddingBottom={paddingBottom}
+                    numberOfLines={numberOfLines}
+
                 />
             </FieldContent>
 
@@ -74,7 +79,7 @@ export const BoxInput = ({
                     height={height}
                     padding={padding}
                     paddingBottom={paddingBottom}
-                    
+
                 />
             </FieldContent>
 

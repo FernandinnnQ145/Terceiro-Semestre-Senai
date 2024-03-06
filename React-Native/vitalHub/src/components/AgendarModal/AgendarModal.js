@@ -9,8 +9,17 @@ import { ButtonNivelModal, ContainerButtonsModal, LabelModal, ModalContentAgenda
 export const AgendarModal = ({
     visible,
     setShowModalAgendar,
+    navigation,
     ...rest
+    
 }) => {
+
+    function Qualquer (){
+        navigation.navigate("SelecionarClinica")
+
+        setShowModalAgendar(false)
+    }
+
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             <PatientModalAgendar>
@@ -36,7 +45,7 @@ export const AgendarModal = ({
                         editable={true}
                     />
 
-                    <Button>
+                    <Button onPress={() => Qualquer()}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </Button>
 

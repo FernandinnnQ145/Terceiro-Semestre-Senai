@@ -18,3 +18,8 @@ font-family: MontserratAlternates_600SemiBold;
 text-decoration-line: underline;
 color: #344F8F;
 `
+
+export const ButtonSecundarioTitleRed = styled(ButtonSecundarioTitleBlue)`
+color: #C81D25;
+text-decoration-line: none;
+`

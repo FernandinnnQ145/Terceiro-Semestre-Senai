@@ -7,7 +7,13 @@ import { LinkMediumCancelar } from "../../components/LinkMedium/Style"
 import { Logo } from "../../components/Logo/Style"
 import { TextSubCriar, Title } from "../../components/Title/Style"
 
-export const CriarConta = () => {
+export const CriarConta = ({
+    navigation
+}) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
     return (
         <Container>
             <Logo
@@ -32,10 +38,10 @@ export const CriarConta = () => {
                     valueColor='#FFFFF'
                 />
                 <Button>
-                    <ButtonTitle>Cadastrar</ButtonTitle>
+                    <ButtonTitle onPress={() => Login()}>Cadastrar</ButtonTitle>
                 </Button>
             </Box>
-            <LinkMediumCancelar>Cancelar</LinkMediumCancelar>
+            <LinkMediumCancelar onPress={() => navigation.replace("Login")}>Cancelar</LinkMediumCancelar>
 
 
 

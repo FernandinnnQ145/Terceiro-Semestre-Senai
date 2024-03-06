@@ -28,3 +28,16 @@ width: 70%;
 gap: 11px;
 
 `
+export const BoxEspacoButtons = styled.View`
+flex-direction: row;
+justify-content: space-between;
+margin-top: 10px;
+`
+
+export const Linha = styled.View`
+width: 90%;
+height: 2px;
+background-color: #8C8A97;
+margin-top: 20px;
+margin-bottom: 20px;
+`

@@ -8,6 +8,7 @@ import { ButtonSecundarioTitleBlue, ButtonTitle } from "../ButtonTitle/Style"
 export const MedicoModal = ({
     visible,
     setShowModalMedico,
+    navigation,
     ...rest
 }) => {
     return (
@@ -26,7 +27,7 @@ export const MedicoModal = ({
 
 
                     <ButtonModal>
-                        <ButtonTitle>Ver local da consulta</ButtonTitle>
+                        <ButtonTitle onPress={()=> navigation.navigate("LocalConsulta")}>Ver local da consulta</ButtonTitle>
                     </ButtonModal>
 
                     <ButtonSecundario onPress={()=> setShowModalMedico(false)}>

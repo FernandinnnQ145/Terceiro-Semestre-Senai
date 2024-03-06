@@ -11,11 +11,13 @@ import { FontAwesome6 } from '@expo/vector-icons';
 import { IconVoltar } from '../../components/IconVoltar/Style';
 
 
-export const VerificarConta = () => {
+export const VerificarConta = ({
+    navigation
+}) => {
     return (
         <Container>
             <IconVoltar>
-                <FontAwesome6 name="x" size={24} color="white" />
+                <FontAwesome6 name="x" size={24} color="white" onPress={() => navigation.replace("Login")} />
             </IconVoltar>
 
 
@@ -49,7 +51,7 @@ export const VerificarConta = () => {
                 />
             </BoxRow>
             <Box>
-                <Button>
+                <Button onPress={() => navigation.replace("RedefinirSenha")}>
                     <ButtonTitle>Entrar</ButtonTitle>
                 </Button>
             </Box>

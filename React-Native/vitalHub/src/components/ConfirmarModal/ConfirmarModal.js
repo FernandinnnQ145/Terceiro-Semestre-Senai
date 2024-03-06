@@ -8,8 +8,13 @@ import { ButtonSecundarioTitleBlue, ButtonTitle } from "../ButtonTitle/Style"
 export const ConfirmarModal = ({
     visible,
     setModalConfirmar,
+    navigation,
     ...rest
 }) => {
+
+    async function Login(){
+        navigation.navigate("Main")
+    }
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
             <PatientModal>
@@ -41,7 +46,7 @@ export const ConfirmarModal = ({
 
 
 
-                    <ButtonModal>
+                    <ButtonModal onPress={() => navigation.navigate("Main")}>
                         <ButtonTitle>Continuar</ButtonTitle>
                     </ButtonModal>
 

@@ -18,7 +18,9 @@ import { MedicoModal } from '../../components/MedicoModal/MedicoModal'
 
 
 
-export const HomePaciente = () => {
+export const HomePaciente = ({
+    navigation
+}) => {
     //state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente")
 
@@ -35,7 +37,6 @@ export const HomePaciente = () => {
 
     //state para exibicao dos modals
     const [showModalCancel, setShowModalCancel] = useState(false)
-    const [showModalAppointment, setShowModalAppointment] = useState(false)
     const [showModalAgendar, setShowModalAgendar] = useState(false)
     const [showModalMedico, setShowModalMedico] = useState(false)
     
@@ -95,7 +96,7 @@ export const HomePaciente = () => {
                         <Card
                             situacao={item.situacao}
                             onPressCancel={() => setShowModalCancel(true)}
-                            onPressAppointment={() => setShowModalAppointment(true)}
+                            onPressAppointment={()=> navigation.replace("PrescricaoConsulta")}
                             onPressMedico={() => setShowModalMedico(true)}
                         />
                     )
@@ -106,7 +107,9 @@ export const HomePaciente = () => {
 
             
 
-            <ButtonAgendar onPress={() =>setShowModalAgendar(true)}>
+            <ButtonAgendar onPress={() =>setShowModalAgendar(true)}
+            
+            >
                 <FontAwesome6 name="stethoscope" size={26} color="white" />
             </ButtonAgendar>
 
@@ -120,20 +123,19 @@ export const HomePaciente = () => {
 
             {/* modal ver prontuario */}
 
-            <AppointmentModal
-                visible={showModalAppointment}
-                setShowModalAppointment={setShowModalAppointment}
-            />
+            
 
             <AgendarModal
             visible={showModalAgendar}
             setShowModalAgendar={setShowModalAgendar}
+            navigation={navigation}
             />
 
 
             <MedicoModal
             visible={showModalMedico}
             setShowModalMedico={setShowModalMedico}
+            navigation={navigation}
             />
 
 

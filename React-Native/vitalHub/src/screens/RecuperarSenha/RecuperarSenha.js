@@ -9,12 +9,14 @@ import { Button } from "../../components/Button/Style";
 import { ButtonTitle } from "../../components/ButtonTitle/Style";
 import { LinkMediumCancelar } from "../../components/LinkMedium/Style";
 
-export const RecuperarSenha = () => {
+export const RecuperarSenha = ({
+    navigation
+}) => {
     return (
         <Container>
 
             <IconVoltar>
-                <Ionicons name="arrow-back-sharp" size={24} color="white" />
+                <Ionicons name="arrow-back-sharp" size={24} color="white" onPress={() => navigation.replace("Login")} />
             </IconVoltar>
 
             <Logo
@@ -28,11 +30,11 @@ export const RecuperarSenha = () => {
                     placeholder='Usuario ou E-mail'
                     placeholderTextColor='#FFF'
                 />
-                <Button>
+                <Button onPress={()=> navigation.replace("VerificarConta")}>
                     <ButtonTitle>Continuar</ButtonTitle>
                 </Button>
             </Box>
-            <LinkMediumCancelar>Cancelar</LinkMediumCancelar>
+            
 
 
 

@@ -50,6 +50,17 @@ margin-top: 35px;
 margin-bottom: 35px;
 `
 
+export const TextPrescricao = styled(TextSubRecuperar)`
+font-size: 14px;
+color: 4E4B59;
+`
+
+export const TitleEnviaFoto = styled.Text`
+font-family: MontserratAlternates_700Bold;
+font-size: 14px;
+color: white;
+`
+
 
 
 

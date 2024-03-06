@@ -9,11 +9,13 @@ import { Button } from '../../components/Button/Style';
 import { ButtonTitle } from '../../components/ButtonTitle/Style';
 
 
-export const RedefinirSenha = () => {
+export const RedefinirSenha = ({
+    navigation
+}) => {
     return (
         <Container>
             <IconVoltar>
-                <FontAwesome6 name="x" size={24} color="white" />
+                <FontAwesome6 name="x" size={24} color="white" onPress={() => navigation.replace("Login")}/>
             </IconVoltar>
 
 
@@ -34,7 +36,7 @@ export const RedefinirSenha = () => {
                 />
 
 
-                <Button>
+                <Button onPress={() => navigation.replace("Login")}>
                     <ButtonTitle>Confirmar nova senha</ButtonTitle>
                 </Button>
             </Box>

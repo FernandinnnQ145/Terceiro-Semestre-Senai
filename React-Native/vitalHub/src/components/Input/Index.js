@@ -8,10 +8,12 @@ export const Input = ({
     value,
     height = 53,
     padding,
-    paddingBottom
+    paddingBottom,
+    multiline
 }) =>{
     return(
         <InputPreenchido
+            multiline={multiline}
             placeholder ={placeholder}
             editable = {editable}
             keyBoardType={keyType}
@@ -34,11 +36,13 @@ export const InputProntuario = ({
     value,
     height,
     padding,
-    paddingBottom
-    
+    paddingBottom,
+    multiline,
+    numberOfLines
 }) =>{
     return(
         <InputProntuario
+            multiline={multiline}
             placeholder ={placeholder}
             editable = {editable}
             keyBoardType={keyType}
@@ -47,6 +51,8 @@ export const InputProntuario = ({
             height={height}
             padding={padding}
             paddingBottom={paddingBottom}
+            numberOfLines={numberOfLines}
+            
             
         />
     )

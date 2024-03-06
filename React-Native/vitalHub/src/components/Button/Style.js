@@ -63,3 +63,22 @@ export const Btn = styled(Button)`
 `
 export const BtnText = styled(ButtonTitle)`
 `
+
+export const FotoEnviar = styled.TouchableOpacity`
+background-color: #49B3BA;
+border-radius: 5px;
+width: 172px;
+height: 44px;
+gap: 10px;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+`
+
+export const ButtonSecundarioRed = styled(ButtonSecundario)`
+margin-top: none;
+margin-bottom: none;
+align-items: center;
+justify-content: center;
+width: 30%;
+`

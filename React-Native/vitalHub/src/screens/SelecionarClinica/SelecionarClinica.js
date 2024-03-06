@@ -7,7 +7,13 @@ import { Containerwhite } from "../../components/Container/Style"
 import { ListComponent } from "../../components/List/List"
 import { TitleGrayMargin } from "../../components/Title/Style"
 
-export const SelecionarClinica = () => {
+export const SelecionarClinica = ({
+    navigation
+}) => {
+
+    async function Login(){
+        navigation.navigate("Main")
+    }
     const Clinicas = [
         { id: 1, nome: "Fernando", },
         { id: 2, nome: "Fernando",},
@@ -42,12 +48,12 @@ export const SelecionarClinica = () => {
 
 
             <Box>
-                <Button>
+                <Button onPress={() => navigation.replace("SelecionarMedico")}>
                     <ButtonTitle>Continuar</ButtonTitle>
                 </Button>
             </Box>
 
-            <ButtonSecundarioPag>
+            <ButtonSecundarioPag onPress={() => navigation.replace("Main")}>
                 <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
             </ButtonSecundarioPag>
 

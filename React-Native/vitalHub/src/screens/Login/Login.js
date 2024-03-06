@@ -11,7 +11,17 @@ import { ContentAcount, ContentDuvida, ContentLink } from "../../components/Cont
 import { AntDesign } from '@expo/vector-icons';
 
 
-export const Login = () => {
+export const Login = ({
+    navigation
+}) => {
+
+
+async function Login(){
+    navigation.navigate("Main")
+}
+
+
+
     return (
         <Container>
             <Logo
@@ -28,9 +38,10 @@ export const Login = () => {
                     placeholder='Senha'
                     placeholderTextColor='#FFF'
                     valueColor='#FFFFF'
+
                 />
-                <LinkMedium>Esqueceu sua senha</LinkMedium>
-                <Button>
+                <LinkMedium onPress={()=> navigation.replace("RecuperarSenha")}>Esqueceu sua senha?</LinkMedium>
+                <Button onPress={()=> Login()}>
                     <ButtonTitle>Entrar</ButtonTitle>
                 </Button>
                 <ButtonGoogle>
@@ -44,7 +55,7 @@ export const Login = () => {
 
                 <ContentAcount>
                     <ContentDuvida>Nao tem conta? </ContentDuvida>
-                    <ContentLink>Crie uma agora</ContentLink>
+                    <ContentLink onPress={() => navigation.replace("CriarConta")}>Crie uma agora</ContentLink>
                 </ContentAcount>
             </Box>
 

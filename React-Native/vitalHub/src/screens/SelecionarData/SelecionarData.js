@@ -5,41 +5,53 @@ import { Box } from "../../components/BoxCadastrar/Style"
 import { Button, ButtonSecundarioPag } from "../../components/Button/Style"
 import { ButtonSecundarioTitleBlue, ButtonTitle } from "../../components/ButtonTitle/Style"
 import CalendarComponent from "../../components/CallendarList/CallendarList"
-import { Containerwhite } from "../../components/Container/Style"
+import { ContainerScrollView, Containerwhite } from "../../components/Container/Style"
 import { InputSelect, SelectDate } from "../../components/InputSelect/InputSelect"
 import { TitleGrayMargin } from "../../components/Title/Style"
 import { ConfirmarModal } from "../../components/ConfirmarModal/ConfirmarModal"
 
-export const SelecionarData = () => {
+export const SelecionarData = ({
+    navigation
+}) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
+
+
     const [showModalConfirmar, setShowModalConfirmar] = useState(false)
     return (
-        <Containerwhite>
-            <TitleGrayMargin>Selecionar data</TitleGrayMargin>
+        <ContainerScrollView>
+            <Containerwhite>
+                <TitleGrayMargin>Selecionar data</TitleGrayMargin>
 
-            <CalendarComponent />
+                <CalendarComponent />
 
-            <Box>
-                <LabelModal>Selecione um horário disponível</LabelModal>
-            </Box>
+                <Box>
+                    <LabelModal>Selecione um horário disponível</LabelModal>
+                </Box>
 
-            <SelectDate/>
+                <SelectDate />
 
-          <Box>
-                <Button
-                onPress={()=> setShowModalConfirmar(true)}
-                >
-                    <ButtonTitle>Continuar</ButtonTitle>
-                </Button>
-            </Box>
+                <Box>
+                    <Button
+                        onPress={() => setShowModalConfirmar(true)}
+                    >
+                        <ButtonTitle>Continuar</ButtonTitle>
+                    </Button>
+                </Box>
 
-            <ButtonSecundarioPag>
-                <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
-            </ButtonSecundarioPag>
+                <ButtonSecundarioPag onPress={() => navigation.replace("Main")}>
+                    <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
+                </ButtonSecundarioPag>
 
-            <ConfirmarModal
-            visible={showModalConfirmar}
-            setModalConfirmar={setShowModalConfirmar}
-            />
-        </Containerwhite>
+                <ConfirmarModal
+                    visible={showModalConfirmar}
+                    setModalConfirmar={setShowModalConfirmar}
+                    navigation={navigation}
+                />
+            </Containerwhite>
+        </ContainerScrollView>
+
     )
 }
