@@ -13,7 +13,9 @@ import { Card } from "../../components/Card/Card";
 import { CancelattionModal } from "../../components/CancelattionModal/CancelationModal";
 import {AppointmentModal} from "../../components/AppointmentModal/AppointmentModal"
 
-export const HomeMedico = () => {
+export const HomeMedico = ({
+    navigation
+}) => {
     //state para o estado da lista(cards)
     const [statusLista, setStatusLista] = useState("pendente")
 
@@ -91,6 +93,7 @@ export const HomeMedico = () => {
                         <Card 
                         situacao={item.situacao}
                         onPressCancel={() => setShowModalCancel(true)}
+                        onPressMedico={() => navigation.replace("Prontuario")}
                         onPressAppointment={() => setShowModalAppointment(true)}
                         />
                     )
@@ -111,6 +114,7 @@ export const HomeMedico = () => {
             <AppointmentModal
             visible={showModalAppointment}
             setShowModalAppointment={setShowModalAppointment}
+            navigation={navigation}
             />
 
 

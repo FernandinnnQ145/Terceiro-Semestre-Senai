@@ -3,6 +3,7 @@ import { HomePaciente } from '../HomePaciente/HomePaciente';
 import { TelaPerfil } from '../TelaPerfil/TelaPerfil';
 import { ContentIcon, TextIcon } from './Style';
 import { FontAwesome, FontAwesome5 } from '@expo/vector-icons'
+import { HomeMedico } from '../HomeMedico/HomeMedico';
 
 
 const BottomTab = createBottomTabNavigator();
@@ -53,7 +54,7 @@ export const Main = () => {
 
 
             <BottomTab.Screen
-                name="HomePaciente"
+                name='HomeMedico'
                 component={HomePaciente}
             />
 

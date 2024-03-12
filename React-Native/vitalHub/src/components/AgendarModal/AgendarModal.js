@@ -13,9 +13,11 @@ export const AgendarModal = ({
     ...rest
     
 }) => {
+    
 
     function Qualquer (){
-        navigation.navigate("SelecionarClinica")
+        navigation.navigate("SelecionarClinica", { setShowModalAgendar : setShowModalAgendar })
+        
 
         setShowModalAgendar(false)
     }

@@ -9,7 +9,10 @@ import { Button, ButtonSecundario } from "../../components/Button/Style"
 import { ButtonSecundarioTitleBlue, ButtonTitle } from "../../components/ButtonTitle/Style"
 
 
-export const Prontuario = () => {
+export const Prontuario = ({
+    navigation
+}) => {
+
     return (
         <ContainerScrollView showsVerticalScrollIndicator={false}>
             <Containerwhite>
@@ -34,19 +37,24 @@ export const Prontuario = () => {
                         height={120}
                         paddingBottom={60}
                         editable={true}
+                        multiline={true}
+                        numberOfLines={4}
                     />
                     <BoxInput
-                        textLabel='Descricao da consulta:'
-                        placeholder='Descrição'
+                        textLabel='Diagnóstico do paciente:'
+                        placeholder='Diagnóstico'
                         editable={true}
 
                     />
                     <BoxInput
-                        textLabel='Descricao da consulta:'
-                        placeholder='Descrição'
+                        textLabel='Prescrição médica:'
+                        placeholder='Prescrição medica'
                         height={120}
                         paddingBottom={60}
                         editable={true}
+                        multiline={true}
+                        numberOfLines={4}
+                        
                     />
 
 
@@ -57,7 +65,7 @@ export const Prontuario = () => {
                     </Button>
                 </Box>
                 <ButtonSecundario>
-                    <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
+                    <ButtonSecundarioTitleBlue onPress={()=> navigation.replace("Main")}>Cancelar</ButtonSecundarioTitleBlue>
                 </ButtonSecundario>
 
 

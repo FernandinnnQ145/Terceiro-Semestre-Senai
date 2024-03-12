@@ -59,7 +59,9 @@ export const BoxInput = ({
     value,
     height = 53,
     padding,
-    paddingBottom
+    paddingBottom,
+    multiline,
+    numberOfLines
 }) => {
     return (
         <>
@@ -79,6 +81,8 @@ export const BoxInput = ({
                     height={height}
                     padding={padding}
                     paddingBottom={paddingBottom}
+                    multiline={multiline}
+                    numberOfLines={numberOfLines}
 
                 />
             </FieldContent>

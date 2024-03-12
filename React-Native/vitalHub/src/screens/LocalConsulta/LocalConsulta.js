@@ -4,13 +4,15 @@ import { ImagemLocalConsulta } from "../../components/ImagemPerfil/Style"
 import { BoxInputPreenchido } from "../../components/InputAndLabel/Index"
 import { TitleGray } from "../../components/Title/Style"
 import { SubTitleLocal } from "./Style"
+import Map from "../../components/Map/Map"
 
 export const LocalConsulta = () => {
     return (
         <Containerwhite>
-            <ImagemLocalConsulta
-                source={require('../../assets/image/Local.png')}
-            />
+            
+                <Map/>
+           
+
 
             <TitleGray>Clínica Natureh</TitleGray>
             <SubTitleLocal>São Paulo, SP</SubTitleLocal>

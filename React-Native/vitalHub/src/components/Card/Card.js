@@ -11,6 +11,10 @@ export const Card = ({
     onPressAppointment,
     onPressMedico
 }) => {
+
+
+    
+    
     return (
         <CardPacienteAgendadas>
 

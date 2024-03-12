@@ -8,11 +8,16 @@ import { ListComponent } from "../../components/List/List"
 import { TitleGrayMargin } from "../../components/Title/Style"
 
 export const SelecionarClinica = ({
-    navigation
+    navigation,
+    route
 }) => {
+
+    const { setShowModalAgendar } = route.params;
 
     async function Login(){
         navigation.navigate("Main")
+        
+        setShowModalAgendar(true)
     }
     const Clinicas = [
         { id: 1, nome: "Fernando", },
@@ -24,7 +29,7 @@ export const SelecionarClinica = ({
     const [selectClinicaId, setSelectClinicaId] = useState(0)
 
 
-    const [selectedCard, setSelectedCard] = useState(null);
+    
 
     return (
         <Containerwhite>
@@ -53,7 +58,7 @@ export const SelecionarClinica = ({
                 </Button>
             </Box>
 
-            <ButtonSecundarioPag onPress={() => navigation.replace("Main")}>
+            <ButtonSecundarioPag onPress={() => Login()}>
                 <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
             </ButtonSecundarioPag>
 

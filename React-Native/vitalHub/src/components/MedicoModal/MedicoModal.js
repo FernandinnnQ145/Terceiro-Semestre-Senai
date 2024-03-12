@@ -26,8 +26,8 @@ export const MedicoModal = ({
                     </View>
 
 
-                    <ButtonModal>
-                        <ButtonTitle onPress={()=> navigation.navigate("LocalConsulta")}>Ver local da consulta</ButtonTitle>
+                    <ButtonModal onPress={()=> navigation.navigate("LocalConsulta")}>
+                        <ButtonTitle>Ver local da consulta</ButtonTitle>
                     </ButtonModal>
 
                     <ButtonSecundario onPress={()=> setShowModalMedico(false)}>

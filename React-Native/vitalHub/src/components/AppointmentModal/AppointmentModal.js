@@ -8,6 +8,7 @@ import { ButtonSecundarioTitleBlue, ButtonTitle } from "../ButtonTitle/Style"
 export const AppointmentModal = ({
     visible,
     setShowModalAppointment,
+    navigation,
     ...rest
 }) => {
     return (
@@ -25,7 +26,7 @@ export const AppointmentModal = ({
                     </View>
 
 
-                    <ButtonModal>
+                    <ButtonModal onPress={()=> navigation.navigate("Prontuario")}>
                         <ButtonTitle>Inserir prontuario</ButtonTitle>
                     </ButtonModal>
 
