@@ -22,7 +22,7 @@ export const RecuperarSenha = ({
             <Logo
                 source={require('../../assets/image/VitalHub_Logo_branco.png')}
             />
-            <Title>Recuperar senha</Title>
+            <Title>Recuperar sua senha</Title>
 
             <Box>
                 <TextSubRecuperar>Digite abaixo seu email cadastrado que enviaremos um link para recuperação de senha</TextSubRecuperar>

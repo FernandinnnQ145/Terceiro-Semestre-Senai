@@ -14,7 +14,7 @@ export const LocalConsulta = () => {
            
 
 
-            <TitleGray>Clínica Natureh</TitleGray>
+            <TitleGray>Clínica Naturebah</TitleGray>
             <SubTitleLocal>São Paulo, SP</SubTitleLocal>
 
 

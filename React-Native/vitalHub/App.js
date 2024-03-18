@@ -18,6 +18,8 @@ import { SelecionarData } from './src/screens/SelecionarData/SelecionarData';
 import { LocalConsulta } from './src/screens/LocalConsulta/LocalConsulta';
 import { PrescricaoConsulta } from './src/screens/PrescricaoConsulta/PrescricaoConsulta';
 import { Main } from './src/screens/Main/Main';
+import Camera2, { CameraComponent } from './src/screens/Camera/Camera';
+import Camera from './src/screens/Camera/Camera';
 
 
 const Stack = createNativeStackNavigator();
@@ -157,6 +159,12 @@ export default function App() {
           name='PrescricaoConsulta'
           component={PrescricaoConsulta}
           options={{ title: "PrescricaoConsulta" }}
+
+        />
+        <Stack.Screen
+          name='CameraComponent'
+          component={CameraComponent}
+          options={{ title: "CameraComponent" }}
 
         />
       </Stack.Navigator>

@@ -117,8 +117,8 @@ export default function Map() {
                                     latitude: -23.5275,
                                     longitude: -46.6784
                                 }}
-                                title='Alinz parque'
-                                description='Palmeirassssssss'
+                                title='Alianz Parque'
+                                description='PALMEIRAS PALMEIRAS PALMEIRAS MEU PALMEIRASSS'
                                 pinColor='green'
                             />
                             <MapViewDirections
@@ -147,7 +147,7 @@ export default function Map() {
                                     longitude: initialPosition.coords.longitude
                                 }}
                                 title='Local Sao Caetano'
-                                description='AAAAAAAAAAAAAAAAAAA'
+                                description='AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
                                 pinColor='orange'
                             />
                         </MapView>

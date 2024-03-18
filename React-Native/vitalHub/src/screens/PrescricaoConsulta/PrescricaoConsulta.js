@@ -87,7 +87,7 @@ export const PrescricaoConsulta = ({
 
 
                     <BoxEspacoButtons>
-                        <FotoEnviar>
+                        <FotoEnviar onPress={()=> navigation.replace("CameraComponent")}>
                             <MaterialCommunityIcons name="camera-plus-outline" size={24} color="#FFFFFF" />
                             <TitleEnviaFoto>Enviar</TitleEnviaFoto>
                         </FotoEnviar>

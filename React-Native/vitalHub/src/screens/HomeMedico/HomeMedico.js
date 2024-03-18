@@ -49,7 +49,7 @@ export const HomeMedico = ({
                     <BoxMensagemHome>
 
                         <TextSubCriar>Bem vindo</TextSubCriar>
-                        <Title>Dr. Claudio</Title>
+                        <Title>Dr. Pato</Title>
 
                     </BoxMensagemHome>
 
@@ -64,7 +64,7 @@ export const HomeMedico = ({
 
             <ButtonsHome>
                 <BtnListAppointment
-                    textButton='Agendaddas'
+                    textButton='Agendadas'
                     clickButton={statusLista === "pendente"}
                     onPress={() => setStatusLista("pendente")}
                 />
