@@ -4,9 +4,13 @@ import { ImagemLocalConsulta } from "../../components/ImagemPerfil/Style"
 import { BoxInputPreenchido } from "../../components/InputAndLabel/Index"
 import { TitleGray } from "../../components/Title/Style"
 import { SubTitleLocal } from "./Style"
+import { ButtonSecundarioPag } from "../../components/Button/Style"
+import { ButtonSecundarioTitleBlue } from "../../components/ButtonTitle/Style"
 import Map from "../../components/Map/Map"
 
-export const LocalConsulta = () => {
+export const LocalConsulta = ({
+    navigation
+}) => {
     return (
         <Containerwhite>
             
@@ -38,6 +42,10 @@ export const LocalConsulta = () => {
                     />
                 </BoxInputRow>
             </Box>
+
+            <ButtonSecundarioPag onPress={() => navigation.replace("Main")}>
+                <ButtonSecundarioTitleBlue>Cancelar</ButtonSecundarioTitleBlue>
+            </ButtonSecundarioPag>
         </Containerwhite>
     )
 }
